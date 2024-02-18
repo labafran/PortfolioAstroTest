@@ -9,12 +9,13 @@ import MailIcon from "../components/icons/Mail.astro";
 import SocialPill from "../components/SocialPill.astro";
 import Experience from "../components/Experience.astro";
 import ExperienceIcon from "../components/icons/ExperienceIcon.astro";
-import SectionConteiner from "../components/SectionContenier.astro";
+import ExperienceConteiner from "../components/ExperienceConteiner.astro";
+import HomeConteiner from "../components/Home.astro";
 ---
 
 <Layout title="Portfolio de Franco Labayen - Desarrollador Web y Programador" description="Contratame como Programador Jr o Desarrollador Web. Especializado en fullstack">
 <main>
-    <SectionConteiner class="py-20 my-24 mb-20">
+    <HomeConteiner>
     	<Image
         	class="size-36 rounded mb-2"
         	src={myImportedImage}
@@ -45,13 +46,13 @@ import SectionConteiner from "../components/SectionContenier.astro";
         		francolabayen@gmail.com
         	</SocialPill>
     	</nav>
-    </SectionConteiner>
-	<SectionConteiner>
+    </HomeConteiner>
+	<ExperienceConteiner>
 		<div class="flex gap-x-2">
 			<ExperienceIcon class="size-6"/>
 			<h2>Experiencia</h2>
 		</div>
 		<Experience />
-	</SectionConteiner>
+	</ExperienceConteiner>
 </main>
 </Layout>
