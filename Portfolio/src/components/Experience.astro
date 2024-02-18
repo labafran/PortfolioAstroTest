@@ -1,0 +1,31 @@
+---
+import type { Image, Picture } from "astro:assets";
+import type { Code, Debug } from "astro:components";
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+  {
+      date: 'Actualmente',
+      title: 'Ayudante de Instalación de Cámaras de Seguridad y Portones',
+      description: 'Ayudo en el emprendimiento de mi padre instalando y configurando cámaras de seguridad y portones. Al configurar cámaras IP puedo poner en práctica conceptos que aprendí en la tecnicatura en cuanto a redes',
+      link: '',
+  },
+  {
+      date: 'Junio 2021 - Diciembre 2021',
+      title: 'Pasantía en Informática',
+      description: 'Durante el último año de secundaria, acepté una pasantía dentro de la escuela para realizar mantenimiento como técnico desarmando, reparando y preparando computadoras en un grupo de trabajo. Incluía tareas como: instalación y configuración de sistemas operativos como Windows y Linux, gestión integral de la seguridad y el rendimiento de los equipos a través de escaneos de seguridad, duplicación de discos duros, implementación de estrategias de respaldo, mantenimiento preventivo y correctivo y formateo de unidades tanto a bajo como a alto nivel.',
+      link: '',
+    },
+]
+---
+
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+    {
+        EXPERIENCE.map(experience => (
+            <li class="mb-10 ms-6">
+                <ExperienceItem {...experience}/>
+            </li>
+        ))
+    }
+</ol>

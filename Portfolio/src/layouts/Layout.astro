@@ -1,0 +1,44 @@
+---
+import Header from '../components/Header.astro';
+import '@fontsource-variable/readex-pro';
+
+interface Props {
+	title: string;
+	description: string;
+}
+
+const {description, title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<Header />
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+		color-scheme: light dark;
+	}
+	html {
+		font-family: 'Readex Pro Variable', sans-serif;
+	}
+	body{
+		background-color: #1f2025;
+		opacity: 1;
+		background: radial-gradient(circle, transparent 20%, #1f2025 20%, #1f2025 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #1f2025 20%, #1f2025 80%, transparent 80%, transparent) 100px 100px, linear-gradient(#323232 8px, transparent 8px) 0 -4px, linear-gradient(90deg, #323232 8px, #1f2025 8px) -4px 0;
+		background-size: 200px 200px, 200px 200px, 100px 100px, 100px 100px;
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+	}
+</style>

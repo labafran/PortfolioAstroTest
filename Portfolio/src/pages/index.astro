@@ -1,0 +1,57 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Tag from "../components/Tags.astro";
+import { Image } from "astro:assets";
+import myImportedImage from "../../public/FrancoLabayen.jpg";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import GithubIcon from "../components/icons/Github.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Experience from "../components/Experience.astro";
+import ExperienceIcon from "../components/icons/ExperienceIcon.astro";
+import SectionConteiner from "../components/SectionContenier.astro";
+---
+
+<Layout title="Portfolio de Franco Labayen - Desarrollador Web y Programador" description="Contratame como Programador Jr o Desarrollador Web. Especializado en fullstack">
+<main>
+    <SectionConteiner class="py-20 my-24 mb-20">
+    	<Image
+        	class="size-36 rounded mb-2"
+        	src={myImportedImage}
+        	alt="Franco Labayen"
+		/>
+		
+    	<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+        Hola! Me llamo Franco <a href="https://linkedin.com/in/franco-agustín-labayen" target="_blank" rel="noopener" class="flex justify-center items-center"><Tag class="text-white">Buscando Trabajo</Tag></a>
+      	</h1>
+
+    	<h2 class="text-xl opacity-85">
+        	Estudiante de <span class="text-purple-400/90">Ingeniería en Sistemas</span> y <span class="text-purple-400/90">Desarrollador Web Entusiasta</span>. Soy de Buenos Aires, <span class="text-blue-400">Arg</span>e<span class="text-yellow-400">n</span>t<span class="text-blue-400">ina</span> 🇦🇷. <span class="opacity-70">Busco expandir mis conocimientos en el área del desarrollo y la programación para generar soliciones a los problemas.</span>
+    	</h2>
+
+    	<nav class="flex gap-x-3 my-5">
+        	<SocialPill href="https://linkedin.com/in/franco-agustín-labayen">
+        		<LinkedInIcon class="size-6" />
+	        	Franco Labayen
+	        </SocialPill>
+
+	        <SocialPill href="https://github.com/labafran">
+	        	<GithubIcon class="size-6" />
+    	    	labafran
+        	</SocialPill>
+
+	        <SocialPill href="mailto:francolabayen@gmail.com?Subject=Contacto%20por%20Trabajo">
+    			<MailIcon class="size-6" />
+        		francolabayen@gmail.com
+        	</SocialPill>
+    	</nav>
+    </SectionConteiner>
+	<SectionConteiner>
+		<div class="flex gap-x-2">
+			<ExperienceIcon class="size-6"/>
+			<h2>Experiencia</h2>
+		</div>
+		<Experience />
+	</SectionConteiner>
+</main>
+</Layout>
