@@ -11,6 +11,9 @@ import Experience from "../components/Experience.astro";
 import ExperienceIcon from "../components/icons/ExperienceIcon.astro";
 import ExperienceConteiner from "../components/ExperienceConteiner.astro";
 import HomeConteiner from "../components/Home.astro";
+import Projects from "../components/Projects.astro";
+import ProyectIcon from "../components/icons/ProyectIcon.astro";
+
 ---
 
 <Layout title="Portfolio de Franco Labayen - Desarrollador Web y Programador" description="Contratame como Programador Jr o Desarrollador Web. Especializado en fullstack">
@@ -50,9 +53,16 @@ import HomeConteiner from "../components/Home.astro";
 	<ExperienceConteiner>
 		<div class="flex gap-x-2">
 			<ExperienceIcon class="size-6"/>
-			<h2>Experiencia</h2>
+			<h2 class="text-2xl font-bold">Experiencia</h2>
 		</div>
 		<Experience />
 	</ExperienceConteiner>
+	<section class="w-full lg:w-[800px] mx-auto bg-black/45 rounded-xl px-5 py-5 my-10">
+		<div class="flex gap-x-2">
+			<ProyectIcon class="size-6"/>
+			<h2 class="text-2xl font-bold mb-6">Proyectos</h2>
+		</div>
+		<Projects />
+	</section>
 </main>
 </Layout>

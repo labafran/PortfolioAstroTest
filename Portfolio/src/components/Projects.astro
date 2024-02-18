@@ -1,0 +1,64 @@
+---
+import HTMLIcon from "./icons/HTMLIcon.astro";
+import TailwindCSSIcon from "./icons/TailwindCSSIcon.astro";
+import JSIcon from "./icons/JSIcon.astro";
+import AstroIcon from "./icons/AstroIcon.astro";
+
+const TAGS = {
+  HTML: {
+    name: "HTML",
+    class: "bg-[#f06529a0] text-white",
+    icon: HTMLIcon,
+  },
+  TAILWIND: {
+    name: "TailwindCSS",
+    class: "bg-[#003159a0] text-white",
+    icon: TailwindCSSIcon,
+  },
+  JS: {
+    name: "JavaScript",
+    class: "bg-[#f0db4fa0] text-white",
+    icon: JSIcon,
+  },
+  ASTRO: {
+    name: "Astro",
+    class: "bg-[#e3047fa0] text-white",
+    icon: AstroIcon,
+  },
+};
+const PROYECTS = [
+  {
+    image: "../public/Portfolio.webp",
+    title: "Portfolio",
+    description:
+      "Proyecto en el que experimenté astro, retomando mis prácticas en desarrollo web. Implementé TailwindCSS para agilizar y facilitar el trabajo de aplicar estilos al proyecto",
+    code: "#",
+    link: "#",
+    tags: [TAGS.HTML, TAGS.TAILWIND, TAGS.JS, TAGS.ASTRO],
+  },
+];
+---
+
+{
+  PROYECTS.map(({ title, image, description, tags, code, link }) => (
+    <article class="mb-12">
+      <h3 class="text-2xl font-semibold mb-3">{title}</h3>
+      <p class="text-lg text-gray-400/90">{description}</p>
+      <ul class="flex gap-x-4 flex-row">
+        {tags.map((tag) => (
+          <li>
+            <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-2 px-3 `}>
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <image
+        src={image}
+        alt={`Captura de pantalla del proyecto ${title}`}
+        class="rounded shadow-2xl shadow-white/10"
+      />
+    </article>
+  ))
+}
