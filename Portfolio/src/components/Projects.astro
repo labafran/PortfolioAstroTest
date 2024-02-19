@@ -44,10 +44,10 @@ const PROYECTS = [
     <article class="mb-12">
       <h3 class="text-2xl font-semibold mb-3">{title}</h3>
       <p class="text-lg text-gray-400/90">{description}</p>
-      <ul class="flex gap-x-4 flex-row">
+      <ul class="flex gap-x-4 flex-wrap">
         {tags.map((tag) => (
           <li>
-            <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-2 px-3 `}>
+            <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-3 my-1`}>
               <tag.icon class="size-4" />
               {tag.name}
             </span>

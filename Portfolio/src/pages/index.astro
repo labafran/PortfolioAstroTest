@@ -13,19 +13,20 @@ import ExperienceConteiner from "../components/ExperienceConteiner.astro";
 import HomeConteiner from "../components/Home.astro";
 import Projects from "../components/Projects.astro";
 import ProyectIcon from "../components/icons/ProyectIcon.astro";
+import Footer from "../components/Footer.astro";
 
 ---
 
 <Layout title="Portfolio de Franco Labayen - Desarrollador Web y Programador" description="Contratame como Programador Jr o Desarrollador Web. Especializado en fullstack">
-<main>
-    <HomeConteiner>
+<main class="px-4">
+    <HomeConteiner id="home">
     	<Image
         	class="size-36 rounded mb-2"
         	src={myImportedImage}
         	alt="Franco Labayen"
 		/>
 		
-    	<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+    	<h1 class="text-white text-3xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-10">
         Hola! Me llamo Franco <a href="https://linkedin.com/in/franco-agustín-labayen" target="_blank" rel="noopener" class="flex justify-center items-center"><Tag class="text-white">Buscando Trabajo</Tag></a>
       	</h1>
 
@@ -33,7 +34,7 @@ import ProyectIcon from "../components/icons/ProyectIcon.astro";
         	Estudiante de <span class="text-purple-400/90">Ingeniería en Sistemas</span> y <span class="text-purple-400/90">Desarrollador Web Entusiasta</span>. Soy de Buenos Aires, <span class="text-blue-400">Arg</span>e<span class="text-yellow-400">n</span>t<span class="text-blue-400">ina</span> 🇦🇷. <span class="opacity-70">Busco expandir mis conocimientos en el área del desarrollo y la programación para generar soliciones a los problemas.</span>
     	</h2>
 
-    	<nav class="flex gap-x-3 my-5">
+    	<nav class="flex gap-3 my-5 flex-wrap">
         	<SocialPill href="https://linkedin.com/in/franco-agustín-labayen">
         		<LinkedInIcon class="size-6" />
 	        	Franco Labayen
@@ -52,17 +53,18 @@ import ProyectIcon from "../components/icons/ProyectIcon.astro";
     </HomeConteiner>
 	<ExperienceConteiner>
 		<div class="flex gap-x-2">
-			<ExperienceIcon class="size-6"/>
+			<ExperienceIcon class="size-10" />
 			<h2 class="text-2xl font-bold">Experiencia</h2>
 		</div>
 		<Experience />
 	</ExperienceConteiner>
-	<section class="w-full lg:w-[800px] mx-auto bg-black/45 rounded-xl px-5 py-5 my-10">
+	<section class="w-full lg:w-[800px] mx-auto bg-black/45 rounded-xl px-5 py-5 my-10" id="projects">
 		<div class="flex gap-x-2">
-			<ProyectIcon class="size-6"/>
+			<ProyectIcon class="size-10"/>
 			<h2 class="text-2xl font-bold mb-6">Proyectos</h2>
 		</div>
 		<Projects />
 	</section>
+	<Footer />
 </main>
 </Layout>
